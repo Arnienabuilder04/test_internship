@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_INTERNSHIP</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="loading-overlay">
+        <div class="loading-text">
+            <p>
+                Loading...
+            </p>
+            <p class="small">
+                Make sure to grant acces to your location.
+            </p>
+        </div>
+    </div>
+    <div class="notification" id="notification">
+        <p class="notification__text" id="notification-text"></p>
+        <button class="notification__close" id="notification-close">&times;</button>
+    </div>
+    <canvas class="webgl_canvas" id="webgl_canvas"  width="400" height="400"></canvas>
+    <main class="info">
+        <div class="info__data">
+            <p class="info__data--condition light">loading condition</p>
+            <p class="info__data--temperature">...<span class="light light--text">°C</span></p>
+            <div class="info__title">
+                <p class="info__title--city ">loading city</p>
+                <p class="info__title--country light">loading country</p>
+            </div>
+        </div>
+        <div class="info__graph">
+            <div class="info__graph--input">
+                <input type="text" id="location-input" placeholder="Enter location" />
+                <button class="info__graph--other" id="change-location-button">Search</button>
+            </div>
+            <div class="info__graph--forecast"></div>
+        </div>
+    </main>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
