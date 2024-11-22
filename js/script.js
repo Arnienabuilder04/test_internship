@@ -58,13 +58,13 @@ scene.add(sphere);
 
 const loadingOverlay = document.querySelector('.loading-overlay');
 
-function showLoading() {
+const showLoading = () => {
     loadingOverlay.classList.add('active');
-}
+};
 
-function hideLoading() {
+const hideLoading = () => {
     loadingOverlay.classList.remove('active');
-}
+};
 
 const latLngToSphereCoords = (radius, lat, lng) => {
     const phi = (90 - lat) * (Math.PI / 180);
@@ -163,7 +163,7 @@ const setData = (currentData, forecastData) => {
     document.querySelector('.info__data').classList.add('slide-in-top');
 };
 
-function showNotification(message) {
+const showNotification = (message) => {
     const notification = document.getElementById('notification');
     const notificationText = document.getElementById('notification-text');
 
@@ -173,7 +173,7 @@ function showNotification(message) {
     setTimeout(() => {
         notification.classList.remove('show');
     }, 5000);
-}
+};
 
 const notificationClose = document.getElementById('notification-close');
 notificationClose.addEventListener('click', () => {
